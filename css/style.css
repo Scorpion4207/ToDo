@@ -113,6 +113,7 @@ h1 {
 
 .task{
   display: flex;
+  gap: 10px;
 }
 
 .text{
