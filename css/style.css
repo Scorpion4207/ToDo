@@ -1,0 +1,166 @@
+@import "reset.css";
+@import "fonts.css";
+
+:root {
+  --font-family: "Roboto", sans-serif;
+  --color-text: #ffffff;
+  --blue-hover:  #39b9ec;
+  --bg-color: black;
+}
+
+.body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  background-color: var(--bg-color);
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 18px;
+  color:  #39b9ec;
+  text-align: center;
+  margin: 4px 0 12px;
+}
+
+
+
+.container {
+  max-width: 506px;
+  margin: 0 auto;
+  padding: 0 15px;
+  height: 100%;
+}
+
+.toDo__inner {
+  display: flex;
+  flex-direction: column;
+  margin-top: 100px;
+}
+
+.addTask,
+.task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid var(--color-text);
+  border-radius: 6px;
+  background: var(--bg-color);
+  padding: 12px;
+  margin-bottom: 8px;
+}
+
+.task{
+  align-items: flex-start;
+}
+
+.addText {
+  font-weight: 400;
+  font-size: 18px;
+  width: 100%;
+  color: var(--color-text);
+  background-color: var(--bg-color);
+}
+.addText:focus {
+  color: var(--blue-hover);
+}
+.addText::placeholder {
+  color: rgb(186, 186, 186);
+}
+.btnAddTask,
+.btnCloseTask {
+  width: 18px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  background: transparent;
+  margin-left: 12px;
+}
+
+.btnAddTask::before,
+.btnAddTask::after,
+.btnCloseTask::before,
+.btnCloseTask::after {
+  content: "";
+  position: absolute;
+  border: 1px solid var(--color-text);
+  width: 18px;
+  height: 0px;
+  transition: all .3s;
+}
+.btnAddTask:hover::before,
+.btnAddTask:hover::after,
+.btnCloseTask:hover::before,
+.btnCloseTask:hover::after {
+  border: 1px solid var(--blue-hover)
+}
+.TaskDone:hover::before,
+.TaskDone:hover::after {
+  border: 1px solid black
+}
+
+.btnAddTask::after {
+  transform: rotate(91deg);
+}
+
+.btnCloseTask::before {
+  transform: rotate(-45deg);
+}
+.btnCloseTask::after {
+  transform: rotate(45deg);
+}
+
+.task{
+  display: flex;
+}
+
+.text{
+  word-wrap: break-word;
+  max-width: 370px;
+  flex-grow: 1;
+  transform: rotateY(-8px);
+  color: var(--color-text);
+  transition: all .3s;
+}
+.textDone{
+  background-color: var(--blue-hover);
+}
+
+
+.checkbox{
+  appearance: none;
+    border: 1px solid var(--color-text);
+    border-radius: 50%;
+    width: 21px;
+    height: 21px;
+    flex-shrink: 0;
+    transition: .3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox::before {
+  content: '';
+  position: absolute;
+  inset: 2px;
+  border-radius: 50%;
+  background: var(--color-text);
+  transition: .3s;
+  opacity: 0;
+}
+.checkbox:hover {
+  border: 1px solid var(--blue-hover);
+}
+.checkbox:hover.checkbox::before {
+  background: var(--blue-hover);
+}
+.checkboxDone:hover {
+  border: 1px solid black;
+}
+.checkboxDone:hover.checkbox::before {
+  background: black;
+}
+.checkbox:checked.checkbox::before{
+  opacity: 1;
+}

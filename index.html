@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>#19 JSON</title>
+  </head>
+  <body class="body">
+    <div class="toDo__inner container">
+      <h1 id="title">ГУНИВНИНГ В TODO LIST</h1>
+      <h1>HIGH</h1>
+      <div class="HIGH">
+        <form class="addTask" id="formHigh">
+          <input
+            type="text"
+            placeholder="Добавить важных дел"
+            class="addText"
+            id="addTextHigh"
+          />
+          <button class="btnAddTask"></button>
+        </form>
+        <div id="taskListHigh"></div>
+      </div>
+      <h1>MEDIUM</h1>
+      <div class="MEDIUM">
+        <form class="addTask" id="formMedium">
+          <input
+            type="text"
+            placeholder="Добавить средних дел"
+            class="addText"
+            id="addTextMedium"
+          />
+          <button class="btnAddTask"></button>
+        </form>
+        <div id="taskListMedium"></div>
+      </div>
+      <h1>LOW</h1>
+      <form class="addTask" id="formLow">
+        <input
+          type="text"
+          placeholder="Добавить ра**издяйских дел"
+          class="addText"
+          id="addTextLow"
+        />
+        <button class="btnAddTask addLow"></button>
+      </form>
+      <div id="taskListLow"></div>
+    </div>
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

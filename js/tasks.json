@@ -1,0 +1,29 @@
+{
+  "tasks": [
+    {
+      "name": "Сходить в GYM", 
+      "status": "Done", 
+      "priority": "high"
+    },
+    {
+      "name": "Почитать берсерка", 
+      "status": "To Do", 
+      "priority": "medium"
+    },
+    {
+      "name": "Почилить", 
+      "status": "Done", 
+      "priority": "medium"
+    },
+    {
+      "name": "Спать", 
+      "status": "To Do", 
+      "priority": "high"
+    },
+    {
+      "name": "Поиграть наконецто в MK", 
+      "status": "To Do", 
+      "priority": "low"
+    }
+  ]
+}
